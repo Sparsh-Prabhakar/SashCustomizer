@@ -5,7 +5,11 @@
 </head>
 
 <body>
-	<div class="container-head">
+    <!-- Left Side (Form) -->
+	<div class="main-container">
+    <div class="left-container">
+
+	<div>
 		<h1 style="text-align: center">Sash Customizer</h1>
 	</div>
 	<div class="form-row">
@@ -62,5 +66,23 @@
         </div>
 			</form>
 		</div> -->
+	    </div>
+	</div>
+	<!-- Right Side (Scrollable Image Gallery) -->
+	<div class="right-container">
+		<h1 style="text-align: center;">Image Gallery</h1>
+		<div class="image-gallery">
+                <!-- Dynamic Image Generation -->
+                <script>
+                    const gallery = document.querySelector('.image-gallery');
+                    for (let i = 1; i <= 10; i++) {
+                        const imgDiv = document.createElement('div');
+                        imgDiv.classList.add('image-container');
+                        imgDiv.innerHTML = `<img src="src/assets/usc.png" alt="Image ${i}">`;
+                        gallery.appendChild(imgDiv);
+                    }
+                </script>
+		</div>
+	</div>
 	</div>
 </body>
